@@ -1,0 +1,28 @@
+name: release-main
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: simple
+          signoff: "github-release[bot] <github-release-bot@mycompany.com>"
+
+      - uses: mjheitland/tfghactions/github-create-major-minor-tags@v1
+        with:
+          version: ${{ steps.release.outputs.tag_name }}
+        if: ${{ steps.release.outputs.release_created }}

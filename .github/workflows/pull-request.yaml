@@ -1,0 +1,47 @@
+name: pull-request-modules
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+  pull_request_target:
+    branches:
+      - main
+
+permissions:
+  # allow github actions to assume an iam role
+  id-token: write
+  # checkout the repository
+  contents: read
+  # post status of plan
+  issues: write
+  # post tfsec comments in pull requests
+  pull-requests: write
+  # allow security events to be published
+  security-events: write
+
+# do not run in parallel
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  validate-module:
+    name: validate-module
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: assume-role
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.DEPLOY_ROLE }}
+          aws-region: ${{ secrets.REGION }}
+
+      - name: validate-module
+        uses: mjheitland/tfghactions/terraform-module-validate@v1
