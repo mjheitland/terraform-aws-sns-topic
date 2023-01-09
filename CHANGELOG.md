@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.2](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.1...v1.0.2) (2023-01-09)
+
+
+### Bug Fixes
+
+* add release-main workflow ([b96019c](https://github.com/mjheitland/terraform-aws-sns-topic/commit/b96019c356882ac742510d0ac65ceac16b1ba300))
+
 ## [1.0.1](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.0...v1.0.1) (2023-01-06)
 
 
