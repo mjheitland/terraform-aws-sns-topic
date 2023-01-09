@@ -3,10 +3,6 @@ name: pull-request-modules
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
-
   pull_request_target:
     branches:
       - main
