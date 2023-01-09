@@ -28,7 +28,7 @@ to your AWS account.
         {
             "Effect": "Allow",
             "Principal": {
-                "Federated": "arn:aws:iam::<your AWS account number>:oidc-provider/token.actions.githubusercontent.com"
+                "Federated": "arn:aws:iam::<YOUR AWS ACCOUNT>:oidc-provider/token.actions.githubusercontent.com"
             },
             "Action": "sts:AssumeRoleWithWebIdentity",
             "Condition": {
@@ -36,7 +36,7 @@ to your AWS account.
                     "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
                 },
                 "StringLike": {
-                    "token.actions.githubusercontent.com:sub": "repo:<your GitHub user name>/terraform-aws-sns-topic:*"
+                    "token.actions.githubusercontent.com:sub": "repo:<YOUR GITHUB USER NAME>/terraform-aws-sns-topic:*"
                 }
             }
         }
