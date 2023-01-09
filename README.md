@@ -3,6 +3,47 @@
 
 > Represents a module to create an SNS topic.
 
+## GitHub Actions used in this repository
+
+This repo comes with two GitHub actions:
+
+1. `pull-request` triggers when a new PR is created and validates the Terraform configuration by deploying all examples
+   into your AWS account. The PR should be approved only after the validation has terminated successfully!
+2. `release-main` triggers when the code is pushed into `main`. It creates a new PR.
+   When you approve it, it will create a new GitHub release and add a new semantic version tag to the merge commit.
+
+*Pre-requisite for the GitHub actions:*
+
+1. Add the following secrets to your repo under Settings/Secrets/Actions:
+   - DEPLOY_ROLE: e.g. `arn:aws:iam::0123456789012:role/GitHubActionsDeployRole`
+   - REGION: e.g. `eu-central-1`
+2. To allow GitHub Actions to assume an IAM role for Terraform deployments, add [AWS OIDC Provider](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
+to your AWS account.
+1. Add a `GitHubActionsDeployRole` to your AWS account with the necessary permissions and a Trust Policy like
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::<your AWS account number>:oidc-provider/token.actions.githubusercontent.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+                },
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": "repo:<your GitHub user name>/terraform-aws-sns-topic:*"
+                }
+            }
+        }
+    ]
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Example
 
