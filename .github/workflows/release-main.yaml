@@ -15,14 +15,7 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: "! contains(github.event.head_commit.message, '[ci skip]')"
     steps:
-      - uses: google-github-actions/release-please-action@v3
-        id: release
-        with:
-          release-type: simple
-          signoff: "github-release[bot] <github-release-bot@mycompany.com>"
-
-      - uses: mjheitland/tfghactions/github-create-major-minor-tags@v1
-        with:
-          version: ${{ steps.release.outputs.tag_name }}
-        if: ${{ steps.release.outputs.release_created }}
+      - name: terraform-module-release
+        uses: mjheitland/tfghactions/terraform-module-release@v1
