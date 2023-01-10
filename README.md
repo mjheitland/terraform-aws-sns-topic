@@ -19,7 +19,7 @@ This repo comes with two GitHub actions:
    - REGION: e.g. `eu-central-1`
 2. To allow GitHub Actions to assume an IAM role for Terraform deployments, add [AWS OIDC Provider](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 to your AWS account.
-1. Add a `GitHubActionsDeployRole` to your AWS account with the necessary permissions and a Trust Policy like
+3. Add a `GitHubActionsDeployRole` to your AWS account with the necessary permissions and a Trust Policy like
 
 ```json
 {
