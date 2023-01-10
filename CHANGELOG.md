@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.5](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.4...v1.0.5) (2023-01-10)
+
+
+### Bug Fixes
+
+* rename steps ([a8db0cc](https://github.com/mjheitland/terraform-aws-sns-topic/commit/a8db0cc65c89167446a35cf43c74074d3ffb360f))
+
 ## [1.0.4](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.3...v1.0.4) (2023-01-09)
 
 
