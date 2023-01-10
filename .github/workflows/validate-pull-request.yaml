@@ -1,4 +1,4 @@
-name: pull-request-modules
+name: validate-pull-request
 
 on:
   workflow_dispatch:
