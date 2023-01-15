@@ -14,7 +14,7 @@ permissions:
   pull-requests: write
   security-events: write
 
-# do not run in parallel
+# true = cancel any running job and start a new job with the current source code
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
