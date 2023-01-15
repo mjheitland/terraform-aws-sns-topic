@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.10](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.9...v1.0.10) (2023-01-15)
+
+
+### Bug Fixes
+
+* restructure ([ed8f0f1](https://github.com/mjheitland/terraform-aws-sns-topic/commit/ed8f0f11f7f96464815eb6e32a68981a2e8ef533))
+
 ## [1.0.9](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.8...v1.0.9) (2023-01-15)
 
 
