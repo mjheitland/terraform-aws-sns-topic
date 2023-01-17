@@ -35,4 +35,4 @@ jobs:
           aws-region: ${{ secrets.REGION }}
 
       - name: validate-module
-        uses: mjheitland/tfghactions/terraform-module-validate@v1
+        uses: mjheitland/github-actions/terraform-module-validate@v1

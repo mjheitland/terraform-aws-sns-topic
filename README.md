@@ -75,7 +75,7 @@ module "basic" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.49.0 |
 
 ## Modules
 
