@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.12](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.11...v1.0.12) (2023-01-17)
+
+
+### Bug Fixes
+
+* plan and apply ([34f40da](https://github.com/mjheitland/terraform-aws-sns-topic/commit/34f40dab0c2acbfa72bac59d749dcdca7e233287))
+
 ## [1.0.11](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.10...v1.0.11) (2023-01-17)
 
 
