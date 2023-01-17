@@ -18,4 +18,4 @@ jobs:
     if: "! contains(github.event.head_commit.message, '[ci skip]') && ! contains(github.event.head_commit.message, 'docs:')"
     steps:
       - name: release-module
-        uses: mjheitland/tfghactions/terraform-module-release@v1
+        uses: mjheitland/github-actions/terraform-module-release@v1
