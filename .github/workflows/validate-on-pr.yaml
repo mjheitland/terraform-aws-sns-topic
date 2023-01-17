@@ -24,7 +24,6 @@ jobs:
     name: validate-module
     runs-on: ubuntu-latest
     steps:
-
       - name: checkout
         uses: actions/checkout@v3
 
