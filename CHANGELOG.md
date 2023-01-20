@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.16](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.15...v1.0.16) (2023-01-20)
+
+
+### Bug Fixes
+
+* CODEOWNERS added ([6716e3d](https://github.com/mjheitland/terraform-aws-sns-topic/commit/6716e3d6df7c916b97893f7d65a42e99d362e474))
+
 ## [1.0.15](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.14...v1.0.15) (2023-01-17)
 
 
