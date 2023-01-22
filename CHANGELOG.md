@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [1.0.18](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.17...v1.0.18) (2023-01-22)
+
+
+### Bug Fixes
+
+* separate actions for 'plan', 'test' and 'validate' ([f339e23](https://github.com/mjheitland/terraform-aws-sns-topic/commit/f339e2335d72f75db89aaf21d857aa4eeabc4782))
+* separate actions for 'plan', 'test' and 'validate' ([08ec15f](https://github.com/mjheitland/terraform-aws-sns-topic/commit/08ec15ff84f3aa89c167fa468fd710c45be8a64c))
+* separate actions for 'plan', 'test' and 'validate' ([0a44c98](https://github.com/mjheitland/terraform-aws-sns-topic/commit/0a44c98c447b861a39193c048a565f6d25a7e2bc))
+
 ## [1.0.17](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.16...v1.0.17) (2023-01-22)
 
 
