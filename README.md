@@ -7,8 +7,9 @@
 
 This repo comes with two GitHub actions:
 
-1. `validate-on-pr` triggers when a new PR is created and validates the Terraform configuration by deploying all examples
-   into your AWS account. This action includes also variaous static code analyzers.The PR should be approved only after the validation has terminated successfully!
+1. `validate-and-test-on-pr` triggers when a new PR is created and validates the Terraform configuration by deploying
+   all examples into your AWS account. This action includes also variaous static code analyzers.
+   The PR should be approved only after the validation has terminated successfully!
 2. `release-on-push-to-main` triggers when the code is pushed into `main`. It creates a new PR.
    When you approve it, it will create a new GitHub release and add a new semantic version tag to the merge commit.
 
@@ -57,7 +58,6 @@ module "basic" {
   # do not use this source -- local testing only
   source = "../../"
 
-
   name = "basic-example"
 }
 ```
@@ -75,7 +75,7 @@ module "basic" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.49.0 |
 
 ## Modules
 

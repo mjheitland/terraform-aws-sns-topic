@@ -1,4 +1,4 @@
-name: validate-pull-request
+name: validate-and-test-on-pr
 
 on:
   workflow_dispatch:
@@ -20,12 +20,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  validate-module:
-    name: validate-module
+  validate:
+    name: validate
     runs-on: ubuntu-latest
     steps:
+
       - name: checkout
         uses: actions/checkout@v3
+
+      - name: terraform-validate
+        uses: mjheitland/github-actions/terraform-validate@v1
 
       - name: assume-role
         uses: aws-actions/configure-aws-credentials@v1
@@ -33,5 +37,5 @@ jobs:
           role-to-assume: ${{ secrets.DEPLOY_ROLE }}
           aws-region: ${{ secrets.REGION }}
 
-      - name: validate-module
-        uses: mjheitland/github-actions/terraform-module-validate@v1
+      - name: terraform-test
+        uses: mjheitland/github-actions/terraform-test@v1

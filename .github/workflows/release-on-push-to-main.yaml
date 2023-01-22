@@ -17,5 +17,5 @@ jobs:
     runs-on: ubuntu-latest
     if: "! contains(github.event.head_commit.message, '[ci skip]') && ! contains(github.event.head_commit.message, 'docs:')"
     steps:
-      - name: release-module
-        uses: mjheitland/github-actions/terraform-module-release@v1
+      - name: terraform-release
+        uses: mjheitland/github-actions/terraform-release@v1

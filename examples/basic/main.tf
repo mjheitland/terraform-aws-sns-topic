@@ -5,6 +5,5 @@ module "basic" {
   # do not use this source -- local testing only
   source = "../../"
 
-
   name = "basic-example"
 }
