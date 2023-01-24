@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.19](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.18...v1.0.19) (2023-01-24)
+
+
+### Bug Fixes
+
+* add manual approval for apply ([299cd66](https://github.com/mjheitland/terraform-aws-sns-topic/commit/299cd6625ea350bafeb3994a4c61e975b093f7fd))
+
 ## [1.0.18](https://github.com/mjheitland/terraform-aws-sns-topic/compare/v1.0.17...v1.0.18) (2023-01-22)
 
 
